@@ -208,6 +208,8 @@ public:
 	 * \param power
 	 */
 	void wireWriteByte(uint8_t data, uint8_t power = 0);
+	
+	void wireWriteBytes(const uint8_t *dbuf, uint16_t count, uint8_t power);
 
 	/**
 	 *
@@ -324,7 +326,7 @@ public:
 	 * \param count
 	 * \param power
 	 */
-	void write_bytes(const uint8_t *buf, uint16_t count, bool power = 0);
+	void write_bytes(const uint8_t *buf, uint16_t count, uint8_t power = 0);
 
 
 	/**

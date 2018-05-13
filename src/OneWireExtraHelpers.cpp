@@ -10,7 +10,6 @@
 
 #ifdef USE_DALLASTEMPERATURE_LIBRARY
 #include <DallasTemperature.h>
-#ifdef USE_DALLASTEMPERATURE_LIBRARY
 
 void OneWireHelpersClass::printDeviceAddress(uint8_t devAddr[8]) {
 	Serial.print("{ ");
@@ -33,6 +32,7 @@ void OneWireHelpersClass::printDeviceAddress(uint8_t devAddr[8]) {
 
 	Serial.print(" }");
 }
+#endif
 
 
 #ifdef USE_DALLASTEMPERATURE_LIBRARY

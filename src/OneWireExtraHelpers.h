@@ -5,14 +5,16 @@
  * \date	2017
  * \note	See README.md for any additional author/copyright info.
  */
-
+ 
 #ifndef _DS2482OW__SRC_ONEWIREEXTRAHELPERS_H__
 #define _DS2482OW__SRC_ONEWIREEXTRAHELPERS_H__
 
-#ifdef USE_DALLASTEMPERATURE_LIBRARY
-#include <DallasTemperature.h>
-#endif
+#include <inttypes.h>
 
+#ifdef USE_DALLASTEMPERATURE_LIBRARY
+	#include <DallasTemperature.h>
+
+#endif
 
 class OneWireHelpersClass {
 public:

@@ -500,12 +500,12 @@ static const uint8_t dscrc_table[] = {
  */
 uint8_t OneWire::crc8(const uint8_t *addr, uint8_t len) {
 	uint8_t crc = 0;
-
+	
 	while (len--) {
 #ifdef PLATFORM_HAS_PROGMEM_AVAILABLE
-		crc = pgm_read_byte(dscrc_table + (crc ^ *addr++));
+		crc = *(pgm_read_byte(dscrc_table + (crc ^ *addr++)));
 #else
-		crc = dscrc_table + (crc ^ *addr++);
+		crc = *(dscrc_table + (crc ^ *addr++));
 #endif
 	}
 
